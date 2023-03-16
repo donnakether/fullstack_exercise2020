@@ -1,6 +1,7 @@
 # Semanaomnistack
 
-Node backend with React and ReactNative
+Node backend with React and ReactNative.
+
 First contact with this type of project.
 
 #### Screens ###
