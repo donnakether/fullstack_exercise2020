@@ -21,31 +21,35 @@ Entidades representam tudo que vai ser salvo no banco dados
 
 Funcionalidades para cada entidade
 
-Login de ONG
-Logout de ONG
-Cadastro de ONG
-Cadastrar novos casos
-Deletar casos
-Listar casos específicos de uma ONG
-Listar todos os casos
-Entrar em contato com a ONG
+- Login de ONG
+- Logout de ONG
+- Cadastro de ONG
+- Cadastrar novos casos
+- Deletar casos
+- Listar casos específicos de uma ONG
+- Listar todos os casos
+- Entrar em contato com a ONG
 
 ## Backend
 
-Para inicializar um projeto node na pasta Backend - Cria o arquivo package.json
+Para inicializar um projeto node na pasta Backend 
+- Cria o arquivo package.json
 
 **npm init -y**
 
-Instala pacote express micro Framework com módulos básicos para iniciar a aplicação, como rotas e envio de parâmetros. Dentro do package.json cria objeto dependencias: express.  
+Instala pacote express micro Framework com módulos básicos para iniciar a aplicação, como rotas e envio de parâmetros. 
+Dentro do package.json cria objeto dependencias: express.  
 
 **npm install express**
 
-Criar arquivo index.js - arquivo base para rodar o backend.
+Criar arquivo index.js 
+- arquivo base para rodar o backend.
+
 Nele precisamos das seguintes linhas:
 
-const express = require(‘express’); - cria constante de requisição dos módulos do express, importa e deixa as funcionalidades do express disponíveis.
+- const express = require(‘express’); - cria constante de requisição dos módulos do express, importa e deixa as funcionalidades do express disponíveis.
 
-const app = express(); - cria a aplicação propriamente, instancia a aplicação, nela teremos as rotas e todas as outras funcionalidades 
+- const app = express(); - cria a aplicação propriamente, instancia a aplicação, nela teremos as rotas e todas as outras funcionalidades 
 
 *app.listen(3333); - app “escuta” a porta 3333 localhost:3333*
 
@@ -68,7 +72,8 @@ app.get(‘/‘, (request, response) => {
 });
 ...
  
-O servidor para ver atualização no arquivo precisa ser encerrado e reiniciado: ˆC para finalizar no terminal.
+O servidor para ver atualização no arquivo precisa ser encerrado e reiniciado: 
+ˆC para finalizar no terminal.
 
 
 Criar os recursos /users por exemplo geralmente associado a uma entidade do banco de dados.
@@ -89,14 +94,15 @@ POST -
 PUT -
 DELETE -
 
-No navegador não conseguimos ver os outros métodos. Para visualizar precisamos do software Insomnia
+No navegador não conseguimos ver os outros métodos. 
+- Para visualizar precisamos do software Insomnia
 
 Parâmetros:
 
-Query:
-*http://localhost:3333/users?name=Donna* requisição direto no navegador pela rota users.
+- Query:
+*http://localhost:3333/users?name=Doe* requisição direto no navegador pela rota users.
 
-Route:
+- Route:
 *http://localhost:3333/users/:id*
 
 ...
@@ -137,26 +143,29 @@ Para não precisar reiniciar o tempo inteiro o node, usamos a dependência nodem
 
 -D serve para criar uma dependência que irá rodar apenas no ambiente de desenvolvimento.
 
-Ferramenta para trabalhar com os query builder dentro do projeto com node
 *Knex.js* - Instalar via NPM 
+Ferramenta para trabalhar com os query builder dentro do projeto com node
 
-Organizar o projeto com a pasta SRC na raiz pasta Source para armazenar o código criado. Trocar no package,json o caminho do nodemon.
+Organizar o projeto com a pasta SRC na raiz pasta Source para armazenar o código criado. 
+Trocar no package, json o caminho do *Nodemon*.
 
-Separar as rotas do arquivo index criando na pasta SRC o arquivo routes.js, importar o express, criar variável routes pelo express.
-
-Exportar as rotas pelo module.exports = routes;
-Importar no index.js require(‘./routes’) o ./ é para diferenciar arquivo de pacote. ../ para outra pasta. ./ para a mesma pasta.
-app.use(‘routes’);
+Separar as rotas do arquivo index criando na pasta SRC o arquivo *routes.js*
+- importar o express
+- criar variável routes pelo express.
+- Exportar as rotas pelo *module.exports = routes*;
+- Importar no *index.js* - *require(‘./routes’)* 
+(O ./ é para diferenciar arquivo de pacote. ../ para outra pasta. ./ para a mesma pasta.)  
+- *app.use(‘routes’)*;
 
 No *knexfile.js* trocar o filename, criar a pasta database.
 
-Pelo arquivo Knexfile.js criar migrations em development: *{directory:’caminho para pasta migrations’}*, pasta migrations dentro da pasta database.(aprofundar na documentação do knew.js)
+Pelo arquivo Knexfile.js criar migrations em development: *{directory:’caminho para pasta migrations’}*, pasta migrations dentro da pasta database.
 
 *npx knex migrate:make create_ongs*
 
 Editar o migrate com createTable…
 
-Outros comandos npx knew lista os comandos
+Outros comandos npx knex lista os comandos
 *npx knex migrate:rollback desfaz a última*
 *npx knex migrate:latest - cria a tabela propriamente*
 
