@@ -7,11 +7,11 @@ First contact with this type of project.
 
 Login 
 ![](/login_page.png)
-<img src=”login_page.png”>
+
 
 Register new user
 ![](/register_user.png)
-<img src=”register_user.png”>
+
 
 Entidades representam tudo que vai ser salvo no banco dados
 
@@ -213,7 +213,7 @@ Cliente HTTP npm install axios, chamada para o api do backend e obter respostas.
 *"emmet.syntaxProfiles": { "javascript": "jsx" },*
 *"emmet.includeLanguages": { "javascript": "javascriptreact" }*
 
-##Mobile##
+## Mobile ##
 
 Mobile com ReactNative - **Expo npm install -g expo**
 
@@ -227,7 +227,7 @@ Estilo Camel case para substituir hifens no css exemplo background-color = backg
 
 Não existe herança de estilo. Estilo próprio por elemento. 
 
-###Test###
+### Test ###
 
 TDD ( Test-driven Development) - Criar os testes antes das funcionalidades
 Um mapa das características das funcionalidades, regras de negócio, ex: marcar horários, marcar como o usuário quer, não agendar no mesmo horário.
